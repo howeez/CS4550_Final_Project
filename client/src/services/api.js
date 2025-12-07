@@ -2,7 +2,7 @@ import axios from 'axios';
 import { logoutOn401 } from './logoutOn401.js';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE || 'http://localhost:4000/api'
+  baseURL: import.meta.env.VITE_API_BASE
 });
 
 API.interceptors.request.use(config => {
