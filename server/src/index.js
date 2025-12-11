@@ -28,6 +28,7 @@ app.use(errorHandler);
 mongoose
   .connect(config.MONGO_URI)
   .then(() => {
+    console.log("✔ MongoDB connected");
     app.listen(config.PORT, () => {
       console.log('Server listening on port', config.PORT);
     });
